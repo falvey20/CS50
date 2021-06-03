@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <p>To sell a stock just enter the symbol and the number that you wish to sell below.</p>
+    <form action="/sell" method="post">
+
+        <div class="form-group">
+            <select class="form-control" name="symbol">
+                <option disabled value="" selected>Select which stock to sell</option>
+                {% for symbol in symbols %}
+                <option value='{{ symbol.symbol }}'>{{ symbol.symbol }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="shares" placeholder="Num of Shares" type="number">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Sell Now</button>
+    </form>
+{% endblock %}
+

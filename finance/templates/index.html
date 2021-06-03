@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+      <thead>
+         <tr>
+          <th scope="col">Symbol</th>
+          <th scope="col">Name</th>
+          <th scope="col">Number of Shares</th>
+          <th scope="col">Average Per Share</th>
+          <th scope="col">Current Price</th>
+          <th scope="col">Total</th>
+         </tr>
+      </thead>
+
+
+    <tbody>
+    {% for row in stockData %}
+      <tr>
+          <td>{{ row.symbol }}</td>
+          <td>{{ row.name }} </td>
+          <td>{{ row.numOwned }}</td>
+          <td>{{ row.pricePerShare }}</td>
+          <td>{{ row.currentPrice }}</td>
+          <td>{{ row.total }}</td>
+      </tr>
+
+    {% endfor %}
+
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <th>Total Stock Value: </th>
+          <td>{{ totalAllStocks }}</td>
+      </tr>
+
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <th>Total Cash Value: </th>
+          <td>{{ cash }}</td>
+      </tr>
+
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <th>Portfolio Value: </th>
+          <td>{{ grandTotal }}</td>
+      </tr>
+    </tbody>
+
+    </table>
+
+
+{% endblock %}

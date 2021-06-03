@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <p>To buy a stock just enter the Stock symbol and number of shares below.</p>
+    <form action="/buy" method="post">
+
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="Symbol (eg. AAPL)" type="text">
+        </div>
+
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="shares" placeholder="Num of Shares" type="number" min="1">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Buy Now</button>
+    </form>
+{% endblock %}
