@@ -1,0 +1,51 @@
+body {
+  font-family: Futura, Trebuchet MS, Arial, san-serif;
+  color: #202124;
+  margin: 10px;
+  height: 100vh
+}
+
+.header, .header-links, .header-advanced-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-advanced-logo img {
+  height: 30px;
+}
+
+.searchbar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+
+input {
+  font-size: 16px;
+  width: 200px;
+  padding: 10px 0;
+}
+
+.searchbutton {
+  background-color: blue;
+  color: white;
+}
+
+.header-links {
+  margin-left: auto;
+}
+
+.searchbar-container .searchbar-field {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #afafaf;
+  align-items: center;
+  margin: 10px;
+  padding-left: 15px;
+}
+
+.searchbar-container .searchbar-field input {
+  border: none;
+}
